@@ -1,9 +1,11 @@
 import "./App.css";
 
+import Banner from "./components/Banner/Banner";
+
 function App() {
   return (
     <>
-      <h2>Hello World!</h2>
+      <Banner />
     </>
   );
 }
