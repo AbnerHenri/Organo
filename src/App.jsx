@@ -1,11 +1,13 @@
 import "./App.css";
 
-import Banner from "./components/Banner/Banner";
+import { Banner } from "./components/Banner/Banner";
+import { Form } from "./components/Form/Form";
 
 function App() {
   return (
     <>
       <Banner />
+      <Form />
     </>
   );
 }
