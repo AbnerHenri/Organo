@@ -53,6 +53,9 @@ function App() {
     setCollaborators(newCollaborator);
   };
 
+  console.log(collaborators.filter((e) => e.team == teams[e.team]));
+  // console.log(teams.name);
+
   return (
     <>
       <Banner />
@@ -64,6 +67,7 @@ function App() {
             primaryColor={element.primaryColor}
             secondColor={element.secondColor}
             key={element.name}
+            collaborators={collaborators.filter((e) => e.team === element.name)}
           />
         );
       })}
