@@ -9,12 +9,12 @@ import { Button } from "../Button/Button";
 export const Form = ({ addCollaborator }) => {
   const teamsList = [
     "Programação",
-    "Front-End",
+    "Front-end",
     "Data Science",
     "Devops",
     "UX e Design",
     "Mobile",
-    " Inovação e Gestão",
+    "Inovação e Gestão",
   ];
 
   const [name, setName] = useState("");
