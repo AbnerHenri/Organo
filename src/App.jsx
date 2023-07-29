@@ -53,9 +53,6 @@ function App() {
     setCollaborators(newCollaborator);
   };
 
-  console.log(collaborators.filter((e) => e.team == teams[e.team]));
-  // console.log(teams.name);
-
   return (
     <>
       <Banner />

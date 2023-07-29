@@ -12,16 +12,20 @@ export const Form = ({ addCollaborator, teams }) => {
   const [image, setImage] = useState("");
   const [team, setTeam] = useState("");
 
+  const addCollaboratorAndClearForm = (e) => {
+    addCollaborator(
+      { name: name, office: office, image: image, team: team },
+      e
+    );
+    setName("");
+    setOffice("");
+    setImage("");
+    setTeam("");
+  };
+
   return (
     <section className="formulario">
-      <form
-        onSubmit={(e) =>
-          addCollaborator(
-            { name: name, office: office, image: image, team: team },
-            e
-          )
-        }
-      >
+      <form onSubmit={addCollaboratorAndClearForm}>
         <h1>Preencha os dados para criar o card do colaborador:</h1>
         <br></br>
 
