@@ -16,6 +16,7 @@ export const Team = ({ name, primaryColor, secondColor, collaborators }) => {
                 office={e.office}
                 img={e.image}
                 key={e.name}
+                backColor={primaryColor}
               />
             );
           })}

@@ -13,14 +13,19 @@ export const Form = ({ addCollaborator, teams }) => {
   const [team, setTeam] = useState("");
 
   const addCollaboratorAndClearForm = (e) => {
-    addCollaborator(
-      { name: name, office: office, image: image, team: team },
-      e
-    );
-    setName("");
-    setOffice("");
-    setImage("");
-    setTeam("");
+    if (team == "") {
+      e.preventDefault();
+      alert("O usuário deve ter um time");
+    } else {
+      addCollaborator(
+        { name: name, office: office, image: image, team: team },
+        e
+      );
+      setName("");
+      setOffice("");
+      setImage("");
+      setTeam("");
+    }
   };
 
   return (
