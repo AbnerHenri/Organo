@@ -6,7 +6,7 @@ export const Dropdown = ({ label, items, value, enteredValue }) => {
       <label>{label}</label>
       <select value={value} onChange={(e) => enteredValue(e.target.value)}>
         {items.map((e) => {
-          return <option key={e}>{e}</option>;
+          return <option key={e.name}>{e.name}</option>;
         })}
       </select>
     </div>

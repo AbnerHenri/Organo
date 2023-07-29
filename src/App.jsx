@@ -56,7 +56,7 @@ function App() {
   return (
     <>
       <Banner />
-      <Form addCollaborator={addCollaborator} />
+      <Form addCollaborator={addCollaborator} teams={teams} />
       {teams.map((element) => {
         return (
           <Team

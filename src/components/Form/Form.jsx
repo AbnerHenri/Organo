@@ -6,17 +6,7 @@ import { TextField } from "../TextField/TextField";
 import { Dropdown } from "../DropDown/Dropdown";
 import { Button } from "../Button/Button";
 
-export const Form = ({ addCollaborator }) => {
-  const teamsList = [
-    "Programação",
-    "Front-end",
-    "Data Science",
-    "Devops",
-    "UX e Design",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
+export const Form = ({ addCollaborator, teams }) => {
   const [name, setName] = useState("");
   const [office, setOffice] = useState("");
   const [image, setImage] = useState("");
@@ -58,7 +48,7 @@ export const Form = ({ addCollaborator }) => {
         />
 
         <Dropdown
-          items={teamsList}
+          items={teams}
           required={true}
           label={"Time"}
           value={team}
